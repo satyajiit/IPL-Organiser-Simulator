@@ -1,0 +1,8 @@
+
+class InformationAboutPlayers
+{
+	public:
+	protected:
+};
+
+

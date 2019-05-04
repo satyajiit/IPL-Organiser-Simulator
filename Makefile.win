@@ -1,0 +1,94 @@
+# Project: IPL_CRICKET_ORGANIZER
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = mainClass.o ExternVariables/global.o ExternVariables/global_display_object.o DesignClasses/DesignerClass.o OutputClasses/GetterSetterClass.o Modules/ManageClass.o Modules/AccessInfoClass.o SubModules/InformationAboutPlayers.o SubModules/InformationAboutTeams.o SubModules/ShowUmpires.o SubModules/CoachingStaffInformation.o SubModules/IPLStadiums.o SubModules/TeamOwnersList.o SubModules/addPlayer.o SubModules/addTeam.o SubModules/addUmpires.o SubModules/AddCoach.o SubModules/addStadium.o SubModules/deletePlayer.o Modules/ScheduleGenerator.o Modules/AnalyzePlayers.o Modules/TeamRecords.o Modules/IplStats.o
+LINKOBJ  = mainClass.o ExternVariables/global.o ExternVariables/global_display_object.o DesignClasses/DesignerClass.o OutputClasses/GetterSetterClass.o Modules/ManageClass.o Modules/AccessInfoClass.o SubModules/InformationAboutPlayers.o SubModules/InformationAboutTeams.o SubModules/ShowUmpires.o SubModules/CoachingStaffInformation.o SubModules/IPLStadiums.o SubModules/TeamOwnersList.o SubModules/addPlayer.o SubModules/addTeam.o SubModules/addUmpires.o SubModules/AddCoach.o SubModules/addStadium.o SubModules/deletePlayer.o Modules/ScheduleGenerator.o Modules/AnalyzePlayers.o Modules/TeamRecords.o Modules/IplStats.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = IPL_CRICKET_ORGANIZER.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+mainClass.o: mainClass.cpp
+	$(CPP) -c mainClass.cpp -o mainClass.o $(CXXFLAGS)
+
+ExternVariables/global.o: ExternVariables/global.cpp
+	$(CPP) -c ExternVariables/global.cpp -o ExternVariables/global.o $(CXXFLAGS)
+
+ExternVariables/global_display_object.o: ExternVariables/global_display_object.cpp
+	$(CPP) -c ExternVariables/global_display_object.cpp -o ExternVariables/global_display_object.o $(CXXFLAGS)
+
+DesignClasses/DesignerClass.o: DesignClasses/DesignerClass.cpp
+	$(CPP) -c DesignClasses/DesignerClass.cpp -o DesignClasses/DesignerClass.o $(CXXFLAGS)
+
+OutputClasses/GetterSetterClass.o: OutputClasses/GetterSetterClass.cpp
+	$(CPP) -c OutputClasses/GetterSetterClass.cpp -o OutputClasses/GetterSetterClass.o $(CXXFLAGS)
+
+Modules/ManageClass.o: Modules/ManageClass.cpp
+	$(CPP) -c Modules/ManageClass.cpp -o Modules/ManageClass.o $(CXXFLAGS)
+
+Modules/AccessInfoClass.o: Modules/AccessInfoClass.cpp
+	$(CPP) -c Modules/AccessInfoClass.cpp -o Modules/AccessInfoClass.o $(CXXFLAGS)
+
+SubModules/InformationAboutPlayers.o: SubModules/InformationAboutPlayers.cpp
+	$(CPP) -c SubModules/InformationAboutPlayers.cpp -o SubModules/InformationAboutPlayers.o $(CXXFLAGS)
+
+SubModules/InformationAboutTeams.o: SubModules/InformationAboutTeams.cpp
+	$(CPP) -c SubModules/InformationAboutTeams.cpp -o SubModules/InformationAboutTeams.o $(CXXFLAGS)
+
+SubModules/ShowUmpires.o: SubModules/ShowUmpires.cpp
+	$(CPP) -c SubModules/ShowUmpires.cpp -o SubModules/ShowUmpires.o $(CXXFLAGS)
+
+SubModules/CoachingStaffInformation.o: SubModules/CoachingStaffInformation.cpp
+	$(CPP) -c SubModules/CoachingStaffInformation.cpp -o SubModules/CoachingStaffInformation.o $(CXXFLAGS)
+
+SubModules/IPLStadiums.o: SubModules/IPLStadiums.cpp
+	$(CPP) -c SubModules/IPLStadiums.cpp -o SubModules/IPLStadiums.o $(CXXFLAGS)
+
+SubModules/TeamOwnersList.o: SubModules/TeamOwnersList.cpp
+	$(CPP) -c SubModules/TeamOwnersList.cpp -o SubModules/TeamOwnersList.o $(CXXFLAGS)
+
+SubModules/addPlayer.o: SubModules/addPlayer.cpp
+	$(CPP) -c SubModules/addPlayer.cpp -o SubModules/addPlayer.o $(CXXFLAGS)
+
+SubModules/addTeam.o: SubModules/addTeam.cpp
+	$(CPP) -c SubModules/addTeam.cpp -o SubModules/addTeam.o $(CXXFLAGS)
+
+SubModules/addUmpires.o: SubModules/addUmpires.cpp
+	$(CPP) -c SubModules/addUmpires.cpp -o SubModules/addUmpires.o $(CXXFLAGS)
+
+SubModules/AddCoach.o: SubModules/AddCoach.cpp
+	$(CPP) -c SubModules/AddCoach.cpp -o SubModules/AddCoach.o $(CXXFLAGS)
+
+SubModules/addStadium.o: SubModules/addStadium.cpp
+	$(CPP) -c SubModules/addStadium.cpp -o SubModules/addStadium.o $(CXXFLAGS)
+
+SubModules/deletePlayer.o: SubModules/deletePlayer.cpp
+	$(CPP) -c SubModules/deletePlayer.cpp -o SubModules/deletePlayer.o $(CXXFLAGS)
+
+Modules/ScheduleGenerator.o: Modules/ScheduleGenerator.cpp
+	$(CPP) -c Modules/ScheduleGenerator.cpp -o Modules/ScheduleGenerator.o $(CXXFLAGS)
+
+Modules/AnalyzePlayers.o: Modules/AnalyzePlayers.cpp
+	$(CPP) -c Modules/AnalyzePlayers.cpp -o Modules/AnalyzePlayers.o $(CXXFLAGS)
+
+Modules/TeamRecords.o: Modules/TeamRecords.cpp
+	$(CPP) -c Modules/TeamRecords.cpp -o Modules/TeamRecords.o $(CXXFLAGS)
+
+Modules/IplStats.o: Modules/IplStats.cpp
+	$(CPP) -c Modules/IplStats.cpp -o Modules/IplStats.o $(CXXFLAGS)
